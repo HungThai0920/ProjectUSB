@@ -1,0 +1,165 @@
+:root {
+    --dark: #34495e;
+    --light: #ffffff;
+    --success: #0abf30;
+    --info: #3498db;
+    --warning: #e9bd0c;
+    --error: #e24d4c;
+  }
+  
+
+
+  .toast-list {
+    position: fixed;
+    top: 30px;
+    right: 20px;
+  }
+  
+  .toast-list .toast {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    list-style: none;
+    width: 300px;
+    background: var(--light);
+    padding: 16px 17px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    animation: show 0.3s ease forwards;
+  }
+  
+  @keyframes show {
+    0% {
+      transform: translateX(100%);
+    }
+  
+    40% {
+      transform: translateX(-5%);
+    }
+  
+    80% {
+      transform: translateX(0%);
+    }
+  
+    100% {
+      transform: translateX(-10px);
+    }
+  }
+  
+  .toast-list .toast.hide {
+    animation: hide 0.3s ease forwards;
+  }
+  
+  @keyframes hide {
+    0% {
+      transform: translateX(-10px);
+    }
+  
+    40% {
+      transform: translateX(0%);
+    }
+  
+    80% {
+      transform: translateX(-5%);
+    }
+  
+    100% {
+      transform: translateX(calc(100% + 20px));
+    }
+  }
+  
+  .toast-list .toast::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: red;
+    bottom: 0;
+    left: 0;
+    animation: load 5s linear forwards;
+  }
+  
+  @keyframes load {
+    100% {
+      width: 0;
+    }
+  }
+  
+  .buttons .btn#success,
+  .toast-list .toast.success::before {
+    background: var(--success);
+  }
+  
+  .buttons .btn#info,
+  .toast-list .toast.info::before {
+    background: var(--info);
+  }
+  
+  .buttons .btn#warning,
+  .toast-list .toast.warning::before {
+    background: var(--warning);
+  }
+  
+  .buttons .btn#error,
+  .toast-list .toast.error::before {
+    background: var(--error);
+  }
+  
+  .toast-list .toast .column {
+    display: flex;
+    align-items: center;
+
+  }
+  
+  .toast-list .toast .column i {
+    font-size: 1.75rem;
+  }
+
+  .toast-list .toast.success .column .icon-type {
+    border-radius: 50px;
+    padding: 4px;
+  }
+  
+  .toast-list .toast.success .column .icon-type-success {
+    color: var(--success);
+    background-color: var(--success);
+  }
+  
+  .toast-list .toast.info .column .icon-type-info {
+    color: var(--info);
+    background-color: var(--success);
+  }
+  .toast-list .toast.warning .column .icon-type-warning {
+    color: var(--warning);
+    background-color: var(--success);
+  }
+  .toast-list .toast.error .column .icon-type-warning {
+    color: var(--error);
+    background-color: var(--success);
+  }
+  
+  .toast-list .toast .column span {
+    font-size: 1.05rem;
+    margin-left: 12px;
+    word-break: break-all;
+  }
+  
+  .toast-list .toast .close-icon{
+    cursor: pointer;
+    color: #aeb0d7;
+  }
+  
+  .buttons .btn {
+    outline: none;
+    border: none;
+    background-color: red;
+    color: var(--light);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 1.2rem;
+  }

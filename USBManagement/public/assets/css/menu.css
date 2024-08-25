@@ -1,0 +1,254 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .min-h-full {
+    min-height: 100%;
+  }
+  
+  .navbar {
+    border-bottom: 1px solid #e5e7eb;
+    background-color: #fff;
+  }
+  
+  .container {
+    max-width: 92%;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  
+  .navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-img {
+    height: 32px;
+    display: block;
+  }
+  
+  .nav-links {
+    display: flex;
+    margin-left: 24px;
+    gap: 24px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #6b7280;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-bottom-color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #4b5563;
+    border-bottom-color: #d1d5db;
+  }
+  
+  .nav-link.current {
+    color: #111827;
+    border-bottom-color: #6366f1;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .notification-button {
+    position: relative;
+    background-color: #fff;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    color: #9ca3af;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .notification-button:hover {
+    color: #6b7280;
+  }
+  
+  .profile-menu {
+    position: relative;
+    margin-left: 16px;
+  }
+  
+  .profile-button {
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .profile-img {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+  }
+  
+  .profile-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    width: 12rem;
+  }
+  
+  .profile-menu:hover .profile-dropdown {
+    display: block;
+  }
+  
+  .dropdown-item {
+    display: block;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #374151;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f3f4f6;
+    color: #1f2937;
+  }
+
+
+  
+  .mobile-menu-button {
+    display: none;
+  }
+  
+  .mobile-menu {
+    display: none;
+    background-color: #fff;
+    border-top: 1px solid #e5e7eb;
+  }
+  
+  .mobile-nav-links {
+    padding: 16px;
+  }
+  
+  .mobile-nav-link {
+    display: block;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #6b7280;
+    text-decoration: none;
+    border-left: 4px solid transparent;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
+  .mobile-nav-link:hover {
+    background-color: #f9fafb;
+    color: #4b5563;
+    border-left-color: #d1d5db;
+  }
+  
+  .mobile-nav-link.current {
+    background-color: #eef2ff;
+    color: #4338ca;
+    border-left-color: #6366f1;
+  }
+  
+  .mobile-profile {
+    padding: 16px;
+    border-top: 1px solid #e5e7eb;
+  }
+  
+  .mobile-profile-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .mobile-profile-img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+  }
+  
+  .mobile-profile-name {
+    font-size: 16px;
+    color: #111827;
+  }
+  
+  .mobile-profile-email {
+    font-size: 14px;
+    color: #6b7280;
+  }
+  
+  .mobile-profile-dropdown {
+    margin-top: 16px;
+  }
+  
+  .header {
+    padding: 32px 0;
+  }
+  
+  .header-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #111827;
+  }
+  
+  .content {
+    padding: 32px 16px;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 640px) {
+    .nav-links,
+    .navbar-right {
+      display: none;
+    }
+  
+    .mobile-menu-button {
+      display: flex;
+    }
+  
+    .mobile-menu-button .menu-button {
+      background-color: #fff;
+      border: none;
+      padding: 8px;
+      cursor: pointer;
+    }
+  
+    .mobile-menu-button .icon {
+      height: 24px;
+      width: 24px;
+    }
+  
+    .mobile-menu {
+      display: block;
+    }
+  
+    .navbar-content {
+      justify-content: space-between;
+      width: 100%;
+    }
+  
+    .logo {
+      flex: 1;
+    }
+  }
+  
